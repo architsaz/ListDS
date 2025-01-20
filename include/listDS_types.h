@@ -1,5 +1,5 @@
-#ifndef TYPES_H
-#define TYPES_H
+#ifndef LISTDS_TYPES_H
+#define LISTDS_TYPES_H
 typedef struct 
 {
     double double_data;

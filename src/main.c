@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "common.h"
 #include "ListDS.h"
-#include "types.h"
+#include "listDS_types.h"
 
 int main (void){
 ListData data[300];

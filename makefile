@@ -34,7 +34,7 @@ $(BIN_DIR)/%.o: $(SRC_DIR)/%.c
 
 # Clean the build
 clean:
-	rm -rf $(BIN_DIR)
+	rm -rf $(BIN_DIR) 
 
 # Phony targets
 .PHONY: all clean

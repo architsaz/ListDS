@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "types.h"
+#include "listDS_types.h"
 int init_LDS (int num_lists,ListData **lists2,int **lists_ptr2,int **lists_size2,int temp_size){
     if ( temp_size == 0 || num_lists == 0){
         fprintf(stderr,"! the temporary size or number of list is not defined.\n");
