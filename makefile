@@ -1,12 +1,12 @@
 # Compiler and flags
 CC = gcc
- CFLAGS = -Wall -Wextra -Wshadow -Wconversion -pedantic -std=c99 -D_POSIX_C_SOURCE=200809L -g -fsanitize=address -DDEBUG -Iinclude  -I/dagon1/achitsaz/mylib/include
+# CFLAGS = -Wall -Wextra -Wshadow -Wconversion -pedantic -std=c99 -D_POSIX_C_SOURCE=200809L -g -fsanitize=address -DDEBUG -Iinclude  -I/dagon1/achitsaz/mylib/include
 # CFLAGS = -Wall -Wextra -Wshadow -Wconversion -pedantic -std=c99 -D_POSIX_C_SOURCE=200809L  -g -fsanitize=address -Iinclude
 # CFLAGS = -pg -Iinclude # the run program to generate the gmon.out and open it with command gprof program gmon.out > report.txt
-# CFLAGS = -O3 -march=native -ftree-vectorize -fopt-info-vec -Wall -Wextra -fstack-protector-strong -D_FORTIFY_SOURCE=2 -Iinclude 
-# LIB_DIR = 
-LDFLAGS = -lm
-# LDFLAGS = -L$(LIB_DIR) -lmylib  # Linker flags to specify libraries
+ CFLAGS = -O3 -march=native -ftree-vectorize -fopt-info-vec -Wall -Wextra -fstack-protector-strong -D_FORTIFY_SOURCE=2 -Iinclude -I/dagon1/achitsaz/mylib/include
+ LIB_DIR = lib
+# LDFLAGS = -lm
+  LDFLAGS = -lm -L$(LIB_DIR) -lListDS   # Linker flags to specify libraries
 
 # Directories
 SRC_DIR = src
@@ -38,3 +38,6 @@ clean:
 
 # Phony targets
 .PHONY: all clean
+
+# generate static library by object file in the bin directory
+# ar rcs lib/ListDS.a bin/*.o
